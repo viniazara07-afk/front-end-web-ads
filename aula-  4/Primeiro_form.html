@@ -1,123 +1,130 @@
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <header>
-            <h1>Recrutamento Online</h1>
-        </header>
-        <main>
-            <section>
-                <h2>Cadastre seu currículo</h2>
-                <form action="" method="post">
-                    <p>Preencha o formulário para </p>
-                    <fieldset>
-                        <legend>Dados Pessoais</legend>
-                        <div>
-                            <label for="nome_id">Nome Completo:</label>
-                            <input id="nome_id" name="nome" type="text">
-                        </div>
-                        <div>
-                            <label for="telefone_id">Telefone:</label>
-                            <input id="telefone_id" name="telefone" type="tel">
-                        </div>
-                        <div>
-                            <label for="email_id">Email:</label>
-                            <input id="email_id" name="email" type="email">
-                        </div>
-                        <div>
-                            <label for="data_nasc_id">Data de nascimento:</label>
-                            <input id="data_nasc_id" name="data_nasc" type="date">
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Endereço</legend>
-                        <div>
-                            <label for="logradouro_id">Lougradouro:</label>
-                            <input id="logradouro_id" name="logradouro" type="text">
-                        </div>
-                        <div>
-                            <label for="cidade_id">Cidade-UF:</label>
-                            <input id="cidade_id" name="cidade" type="text">
-                        </div>
-                        <div>
-                            <label for="numero_id">Número:</label>
-                            <input id="numero_id" name="numero" type="number">
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Biografia</legend>
-                        <div>
-                            <label for="resumo_id">Fale sobre você</label>
-                            <textarea id="resumo_id"
-                                      name="resumo"
-                                      rows="10"
-                                      cols="50"></textarea>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Nível pretendido</legend>
-                        <div>
-                            <input id="estagiario_id"
-                                   name="nível"
-                                   type="radio"
-                                   value="estagiario">
-                            <label for="estagiario_id">Estagiário</label>
-                        </div>
-                        <div>
-                            <input id="junior_id"
-                                   name="nível"
-                                   type="radio"
-                                   value="junior">
-                            <label for="junior_id">Júnior</label>
-                        </div>
-                        <fieldset>
-                            <legend>Tecnologias</legend>
-                            <div>
-                            <input id="tec_html_id"
-                                   name="tecnologia"
-                                   type="checkbox"
-                                   value="html">
-                            <label for="tec_html_id">HTML</label>
-                            </div>
-                            <div>
-                            <input id="tec_css_id"
-                                   name="tecnologia"
-                                   type="checkbox"
-                                   value="css">
-                            <label for="tec_css_id">CSS</label>
-                            </div>
-                            <div>
-                            <input id="tec_js_id"
-                                   name="tecnologia"
-                                   type="checkbox"
-                                   value="js">
-                            <label for="tec_js_id">JavaScript</label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Grau de instrução</legend>
-                            <div>
-                                <label for="escolaridade_id">Escolaridade:</label>
-                                <select id="escolaridade_id" name="escolaridade">
-                                    <option value="medio">Ensino Médio</option>
-                                    <option value="graduacao">Graduação</option>
-                                    <option value="pos">Pós-Graduação</option>
-                                </select>
-                            </div>
-                        </fieldset>
-                        <div>
-                            <button type="reset">Limpar dados</button>
-                            <button type="submit">Enviar dados</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <p>Todos os direitos reservados</p>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja de Videogames</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Loja de Videogames</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Compra de Videogame</h2>
+
+        <form action="https://postman-echo.com/post" method="post">
+
+          <p>Preencha os dados para realizar sua compra.</p>
+
+          <fieldset>
+            <legend>Dados do cliente</legend>
+
+            <div>
+              <label for="nome_id">Nome:</label>
+              <input id="nome_id" name="nome" type="text" required />
+            </div>
+
+            <div>
+              <label for="email_id">E-mail:</label>
+              <input id="email_id" name="email" type="email" required />
+            </div>
+
+            <div>
+              <label for="telefone_id">Telefone:</label>
+              <input id="telefone_id" name="telefone" type="tel" />
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Videogame</legend>
+
+            <div>
+              <label for="console_id">Escolha o videogame:</label>
+
+              <select id="console_id" name="console">
+                <option value="ps5">PlayStation 5</option>
+                <option value="xbox">Xbox Series X</option>
+                <option value="switch">Nintendo Switch</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="quantidade_id">Quantidade:</label>
+              <input id="quantidade_id" name="quantidade" type="number" min="1" />
+            </div>
+
+            <div>
+              <input id="controle_id" name="acessorio" type="checkbox" />
+              <label for="controle_id">Controle extra</label>
+            </div>
+
+            <div>
+              <input id="headset_id" name="acessorio" type="checkbox" />
+              <label for="headset_id">Headset Gamer</label>
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <div>
+              <label for="cidade_id">Cidade:</label>
+              <input id="cidade_id" name="cidade" type="text" />
+            </div>
+
+            <div>
+              <label for="endereco_id">Endereço:</label>
+              <input id="endereco_id" name="endereco" type="text" />
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Pagamento</legend>
+
+            <div>
+              <label for="pagamento_id">Forma de pagamento:</label>
+
+              <select id="pagamento_id" name="pagamento">
+                <option value="pix">PIX</option>
+                <option value="credito">Cartão de crédito</option>
+                <option value="debito">Cartão de débito</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="observacoes_id">Observações:</label>
+
+              <textarea
+                id="observacoes_id"
+                name="observacoes"
+                rows="4"
+                cols="40"
+              ></textarea>
+            </div>
+
+          </fieldset>
+
+          <div>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar pedido</button>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Loja de Videogames</p>
+    </footer>
+
+  </body>
 </html>
+```
